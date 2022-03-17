@@ -46,6 +46,8 @@ void print_Brad(Brad b)
     int lgCreanga = 1;
     for (int i = 0; i < b.inaltime; i++)
     {
+        for (int j = 0; j < 9 - lgCreanga; j++)
+            cout << " ";
         for (int j = 0; j < lgCreanga; j++)
             cout << b.varf[i][j] << " ";
         cout << endl;
@@ -65,7 +67,7 @@ void distrugeFuego(Brad b)
 
 int main()
 {
-    Brad b = creazaBrad(10);
+    Brad b = creazaBrad(20);
 
     impodobesteMama(b);
     print_Brad(b);
