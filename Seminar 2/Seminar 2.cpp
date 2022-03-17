@@ -12,7 +12,16 @@ Brad creazaBrad(int h)
 {
     Brad b;
     b.inaltime = h;
-    b.varf = (int**)malloc(sizeof() * b.inaltime);
+    b.varf = (int**)malloc(sizeof(int*) * b.inaltime);
+    int lgCreanga = 1;
+    for (int i = 0; i < h; i++)
+    {
+        b.varf[i] = (int*)malloc(lgCreanga * sizeof(int));
+        lgCreanga = lgCreanga * 2;
+
+        if (lgCreanga > 8) 
+            lgCreanga = 1;
+    }
 
     return b;
 }
